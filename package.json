@@ -1,0 +1,22 @@
+{
+  "name": "code-mongo",
+  "version": "1.0.0",
+  "description": "Mongoose Adventures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sameeri/Code-Mongoose.git"
+  },
+  "author": "Sameeri Marryboyina <sameeri.pavan@gmail.com> (http://www.whack-whack.info/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sameeri/Code-Mongoose/issues"
+  },
+  "homepage": "https://github.com/sameeri/Code-Mongoose#readme",
+  "dependencies": {
+    "mongoose": "4.4.6"
+  }
+}
