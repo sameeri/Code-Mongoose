@@ -1,11 +1,11 @@
 'use strict';
 
-// Inspect what is on mongoose
+// Inspect: what is on mongoose
 var mongoose = require('mongoose');
 console.log('The mongoose library', mongoose);
 
 
-// inspect what is the Schema constructor function
+// Inspect: what is the Schema constructor function
 var Schema = mongoose.Schema;
 console.log('The schema ctor fn', Schema);
 
@@ -13,12 +13,12 @@ var schemaSpec = {
   'name': String
 };
 
-// inspect an object created by the schema constructor
+// Inspect: an object created by the schema constructor
 var bookSchema = new Schema(schemaSpec);
 console.log('Books Schema', bookSchema);
 
 
-// inspect the model helper method.
+// Inspect: the model helper method.
 console.log('The model helper method', mongoose.model)
 
 // Create a model object and inspect it
@@ -29,25 +29,25 @@ var BookModel = mongoose.model('Book', bookSchema);
 console.log('What is the model object returned by model?', BookModel);
 
 
-// Create a model instance and inspect it
+// Create a model instance
 var theGoodParts = new BookModel({
   'name': 'JavaScript: The Good Parts'
 });
 
+// Inspect : The model instance
 console.log("What's the good parts?", theGoodParts);
 
 // Create a connection object.
 mongoose.connect('mongodb://localhost/books');
 var db = mongoose.connection;
 
+//Inspect the connection object
 console.log("What's the connection object?", db);
 
 db.on('error', console.error.bind(console, 'connection error:'));
 
 db.once('open', function() {
   console.log('Yay We are connected');
-
-
 
   //Save a doc.
   // Model instances have instance methods that lets you perform saves.
@@ -84,7 +84,6 @@ db.once('open', function() {
       });
 
     })
-
 
   });
 
